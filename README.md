@@ -11,6 +11,7 @@ TEMAS A TOCAR:
 5. useCallback
 6. useMemo
 7. useReducer
+8. useContext
 
 ---
 
