@@ -15,8 +15,10 @@ TEMAS A TOCAR:
 
 ---
 
-### Para instalar este repositorio, ejecute el siguiente comando en su powershell:
+### Requerimientos:
 
-1. [npm install]()
+1. Tener intalado NODE JS
+2. Ejecutar el comando npm install, para intalar las dependencias necesarias,
+3. Ejecutar el comando npm start para ejecutar la app
 
 
