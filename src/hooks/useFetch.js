@@ -19,25 +19,23 @@ export const useFetch = (url) => {
     fetch(url)
       .then((resp) => resp.json())
       .then((data) => {
-        
-          if (isMounted.current) {
-            setstate({
-              loading: false,
-              error: null,
-              data,
-            });
-          } else {
-            console.log("setState no se llamo");
-          }
-       
+
+        if (isMounted.current) {
+          setstate({
+            loading: false,
+            error: null,
+            data,
+          });
+        }
+
+      }).catch(() => {
+        setstate({
+          data: null,
+          loading: false,
+          error: 'No se pudo cargar la info'
+        });
       });
-    return () => {
-      setstate({
-        data: null,
-        loading: true,
-        error: null,
-      });
-    };
+
   }, [url]);
 
   return state;
